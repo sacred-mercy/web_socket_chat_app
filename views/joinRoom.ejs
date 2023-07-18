@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Join Room</title>
+		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+	</head>
+	<body>
+		<div class="flex flex-col items-center justify-center min-h-screen py-2">
+			<div
+				class="flex flex-col justify-center w-full px-4 py-8 bg-gray-50 shadow-2xl max-w-3xl">
+				<div class="flex flex-col items-center w-full mb-8">
+					<h1 class="text-3xl font-bold text-gray-900">Join room</h1>
+				</div>
+				<form action="/room/join" method="POST" class="flex flex-col w-full">
+					<div class="flex flex-col mb-4">
+						<label
+							for="roomName"
+							class="mb-2 text-lg font-semibold text-gray-700"
+							>Room name</label
+						>
+						<input
+							type="text"
+							name="roomName"
+							id="roomName"
+							placeholder="Room name"
+							class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" />
+					</div>
+					<!-- <div class="flex flex-col mb-4">
+						<label
+							for="roomPassword"
+							class="mb-2 text-lg font-semibold text-gray-700"
+							>Room password</label
+						>
+						<input
+							type="password"
+							name="roomPassword"
+							id="roomPassword"
+							placeholder="Room password"
+							class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" />
+					</div> -->
+					<!-- button to go back and submit form -->
+					<div class="flex flex-col items-center w-full mb-4">
+						<button
+							type="submit"
+							class="w-full px-4 py-2 text-lg font-semibold text-center text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">
+							Join
+						</button>
+					</div>
+					<div class="flex flex-col items-center w-full mb-4">
+						<a
+							href="/"
+							class="w-full px-4 py-2 text-lg font-semibold text-center text-blue-700 bg-blue-200 rounded-lg hover:bg-blue-300"
+							>Back</a
+						>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
